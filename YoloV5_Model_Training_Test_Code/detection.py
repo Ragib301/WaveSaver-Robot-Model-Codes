@@ -4,7 +4,7 @@ import sys
 import pathlib
 pathlib.PosixPath = pathlib.WindowsPath
 
-model_path = 'best.pt'
+model_path = 'best_n.pt'
 model = torch.hub.load('ultralytics/yolov5', 'custom', path=model_path)
 model.conf = 0.7  # Confidence threshold (0-1)
 model.iou = 0.2
